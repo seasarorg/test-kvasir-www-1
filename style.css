@@ -1,0 +1,199 @@
+*
+{
+  margin:0px;
+  padding:0px;
+}
+
+a:link, a:visited
+{
+  border-bottom:dashed 1px #ccc;
+  color:#cc9;
+}
+
+a:hover
+{
+  border-color:#666;
+  border-width:0px 0px 1px 0px;
+  border-style:ridge;
+  color:#dd0;
+}
+
+img.kvasir
+{
+  float:left;
+  padding-top:2px;
+  padding-left:8px;
+  margin-right:5px;
+}
+
+body
+{
+  background:url(images/background.gif) repeat top left;
+  font-family:"Bitstream Vera Sans", "Verdana", sans-serif, serif;
+}
+
+h1
+{
+  display:none;
+}
+
+h2
+{
+  color:#333;
+  border-bottom:2px solid #fc6;
+  font-size:small;
+  margin-top:25px;
+  padding-left:3px;
+}
+
+#orange
+{
+  color:#c30;
+}
+
+#update
+{
+  /* background:#fc6; */
+  font-size:xx-small;
+  margin-left:2px;
+  padding:1px;
+}
+
+#wrapper
+{
+  background:#fff;
+  border-top:solid 5px #c63;
+  border-left:solid 1px #333;
+  border-right:solid 1px #333;
+  /* margin-left:auto; */
+  margin-left:10px;
+  margin-right:auto;
+  margin-bottom:0px;
+  width:780px;
+}
+
+#header
+{
+  background: url(images/title-banner.png) no-repeat top left;
+  /* background:#eeb; */
+  /* border-bottom:solid 1px #360; */
+  height:100px;
+  padding-bottom:20px;
+}
+
+#title
+{
+  color:#ddd;
+  /* float:left; */
+  font-weight:bold;
+  /* margin-right:20px; */
+  padding-top:8px;
+  padding-left:10px;
+}
+
+#menu
+{
+  /* float:left; */
+  font-size:smaller;
+  height:auto;
+  padding-top:8px;
+}
+
+#menu ul
+{
+  list-style:none;
+  margin-left:10px;
+  margin-right:auto;
+}
+
+#menu ul li
+{
+  float:left;
+  margin-right:7px;
+}
+
+#main
+{
+  /* border-top:solid 1px #999; */
+  clear:both;
+  margin-left:10px;
+  margin-right:0px;
+  padding-top:8px;
+}
+
+#main div.left
+{
+  /* border-right:solid 1px #aaa; */
+  float:left;
+  padding:8px 0px 8px 0px;
+  width:450px;
+}
+
+#main div.left ul.dl
+{
+  margin-left:20px;
+  margin-top:8px;
+  margin-bottom:8px;
+}
+
+#main div.right
+{
+  border:ridge 1px #aaa;
+  margin-left:480px;
+  padding:8px 0px 8px 8px;
+  width:260px;
+}
+
+#main div.right h2
+{
+  border-style:none;
+}
+
+#main div.right ul
+{
+  list-style:square;
+  margin:8px 0px 8px 30px;
+}
+
+#main div.date
+{
+  font-size:x-small;
+}
+
+#main div.desc
+{
+  font-size:smaller;
+  padding:8px;
+  padding-right:20px;
+}
+
+#main div.desc p.smaller
+{
+  font-size:small;
+}
+
+#main div.notice
+{
+  background-color:#efc;
+  border:groove 2px #ccc;
+  font-size:x-small;
+  padding:6px 10px 6px 10px;
+}
+
+#main a:link,
+#main a:visited
+{
+  color:#090;
+  font-style:"MS ÉSÉVÉbÉN", monospace, sans-serif;
+}
+
+#footer
+{
+  clear:both;
+  color:#ccc;
+  background:#1a401d;
+  border-top:solid 1px #333;
+  font-weight:bold;
+  font-size:x-small;
+  text-align:center;
+}
