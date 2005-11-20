@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-jp"/>
+    <title>install</title>
+  </head>
+  <body>
+            <h2>インストール</h2>
+            
+          
+          
+                <div class="wiki">
+<p>ここではKvasir/SoraをWindowsXPにインストールする手順を説明します。他のOSの場合も大体同様の手順でインストールを行なうことができると思います。</p>
+<h3>準備</h3>
+<p>Kvasir/Soraを利用するには次のものが必要です。</p>
+<dl>
+<dt>JDK</dt><dd>JDK1.4.2以上</dd>
+<dt>サーブレットコンテナ</dt><dd>ServletAPI2.3準拠のサーブレットコンテナ</dd>
+<dt>DBMS</dt><dd>HSQLDB1.8.0.1以上（同梱）</dd>
+</dl>
+<p>現在、Sun JDK1.4.2_08とApache Tomcat5.0.30で動作を確認しています。DBMSはMySQL、PostgreSQLでも動作が可能なように実装されていますが、現在のところDBMSを切り替える機能が未実装のためHSQLDBが使用されます。またHSQLDB以外のDBMSでの動作確認は行なっていません。</p>
+<h3>インストール</h3>
+<p>まずKvasir/Soraのバイナリアーカイブ<a href="http://maven.seasar.org/maven2/org/seasar/kvasir/dist/kvasir-generic/3.0.0-EA1/kvasir-generic-3.0.0-EA1.zip">kvasir-generic-3.0.0-EA1</a>をダウンロードして下さい。バイナリアーカイブを解凍するとkvasir.warというWARファイルができますので、これをサーブレットコンテナに配備します。例えばTomcatであれば、<em>CATALINA_HOME</em>/webappsにkvasir.warをコピーします。（<em>CATALINA_HOME</em>はTomcatのインストールディレクトリとします。）</p>
+<p>これでインストールは完了です。サーブレットコンテナを起動してトップページにアクセスすると、以下のようなWebサイトのトップページが表示されます。</p>
+<p><img alt="" src="images/install-001.jpg" /></p>
+<p>表示されない場合はkvasir.warの配備に失敗しています。設定を確認して下さい。</p>
+<p>あとはサイト管理ツールを使ってWebサイトにコンテンツを配置したり外観をカスタマイズしたり機能を追加したりしてオリジナルのWebサイトを構築して下さい。Webサイトのカスタマイズ方法については、まず<a href="gettingstarted.html">始めてみよう</a>を読んでみて下さい。</p>
+<p>Enjoy Kvasir/Sora!</p>
+</div>
+</html>
