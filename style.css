@@ -46,6 +46,42 @@ h2
   padding-left:3px;
 }
 
+table
+{
+  color:#333;
+  background-color:#fff;
+  font-size:small;
+}
+
+table tr.published
+{
+  background-color:#ccc;
+}
+
+table th
+{
+  color:#000;
+  background-color:#ce6;
+  white-space:nowrap;
+  padding:3px;
+}
+
+table td
+{
+  white-space:nowrap;
+  border-top:ridge 1px #aaa;
+  border-right:ridge 1px #333;
+  border-bottom:ridge 1px #333;
+  border-left:ridge 1px #aaa;
+  padding:2px;
+}
+
+
+table td ul li
+{
+  margin-left:18px;
+}
+
 #orange
 {
   color:#c30;
@@ -129,6 +165,11 @@ h2
   width:450px;
 }
 
+#main div.left ul
+{
+  margin-left:15px;
+}
+
 #main div.left ul.dl
 {
   margin-left:20px;
@@ -165,6 +206,13 @@ h2
   font-size:smaller;
   padding:8px;
   padding-right:20px;
+}
+
+#main div.desc p.dlheader
+{
+  margin-top:5px;
+  margin-bottom:3px;
+  text-decoration:underline;
 }
 
 #main div.desc p.smaller
