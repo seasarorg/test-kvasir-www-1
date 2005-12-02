@@ -50,7 +50,8 @@ table
 {
   color:#333;
   background-color:#fff;
-  font-size:small;
+  font-size:x-small;
+  width:440px;
 }
 
 table tr.published
@@ -62,13 +63,14 @@ table th
 {
   color:#000;
   background-color:#ce6;
+  font-size:x-small;
   white-space:nowrap;
   padding:3px;
 }
 
 table td
 {
-  white-space:nowrap;
+  /* white-space:nowrap; */
   border-top:ridge 1px #aaa;
   border-right:ridge 1px #333;
   border-bottom:ridge 1px #333;
@@ -79,7 +81,7 @@ table td
 
 table td ul li
 {
-  margin-left:18px;
+  margin-left:7px;
 }
 
 #orange
