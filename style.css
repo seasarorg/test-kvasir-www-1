@@ -46,6 +46,13 @@ h2
   padding-left:3px;
 }
 
+h3
+{
+  margin:7px 0px 7px 0px;
+  font-weight:bold;
+  font-size:large;
+}
+
 table
 {
   color:#333;
@@ -222,12 +229,42 @@ table td ul li
   font-size:small;
 }
 
+#main div.desc p.thumbnail
+{
+  margin:7px 0px 7px 0px;
+}
+
 #main div.notice
 {
   background-color:#efc;
   border:groove 2px #ccc;
   font-size:x-small;
   padding:6px 10px 6px 10px;
+}
+
+#main ol
+{
+  margin-top:7px;
+  margin-left:20px;
+}
+
+#main dl
+{
+  border:solid 1px #999;
+  margin-top:7px;
+  margin-bottom:7px;
+  padding:5px;
+}
+
+#main dt
+{
+  font-size:normal;
+  margin-top:3px;
+}
+
+#main dd
+{
+  margin-left:12px;
 }
 
 #main a:link,
