@@ -1,30 +1,100 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=euc-jp"/>
-    <title>install</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+    <style type="text/css">
+      <!--
+        @import url(../style.css);
+      //-->
+    </style>
+    <title>Seasar Kvasir/Sora Project Web Site</title>
   </head>
   <body>
-            <h2>インストール</h2>
+    <div id="wrapper">
+ 
+      <div id="header">
+        <img class="kvasir" src="../images/kvasir-icon-edged.gif" alt="kvasir"/>
+        <div id="title">&nbsp;Seasar Kvasir/Sora Project</div>
+        <div id="menu">
+        <!--
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">about Kvasir3</a></li>
+              <li><a href="/">Download</a></li>
+              <li><a href="/">Documents</a></li>
+              <li><a href="/">NEWS</a></li>
+              <li><a href="/">License</a></li>
+              <li><a href="/">Project</a></li>
+            </ul>
+          //-->
+          </div>
+      </div>
+
+      <div id="main">
+      <h1>Seasar Kvasir/Sora</h1>
+        <div class="left">
+          <h2>インストール</h2>
+          <div class="desc">
+            <p>
+            ここでは Kvasir/Sora を WindowsXP にインストールする手順を説明します。
+            他のOSの場合も大体同様の手順でインストールを行なうことができると思います。</p>
             
-          
-          
-                <div class="wiki">
-<p>ここではKvasir/SoraをWindowsXPにインストールする手順を説明します。他のOSの場合も大体同様の手順でインストールを行なうことができると思います。</p>
-<h3>準備</h3>
-<p>Kvasir/Soraを利用するには次のものが必要です。</p>
-<dl>
-<dt>JDK</dt><dd>JDK1.4.2以上</dd>
-<dt>サーブレットコンテナ</dt><dd>ServletAPI2.3準拠のサーブレットコンテナ</dd>
-<dt>DBMS</dt><dd>HSQLDB1.8.0.1以上（同梱）</dd>
-</dl>
-<p>現在、Sun JDK1.4.2_08とApache Tomcat5.0.30で動作を確認しています。DBMSはMySQL、PostgreSQLでも動作が可能なように実装されていますが、現在のところDBMSを切り替える機能が未実装のためHSQLDBが使用されます。またHSQLDB以外のDBMSでの動作確認は行なっていません。</p>
-<h3>インストール</h3>
-<p>まずKvasir/Soraのバイナリアーカイブ<a href="http://maven.seasar.org/maven2/org/seasar/kvasir/dist/kvasir-generic/3.0.0-EA1/kvasir-generic-3.0.0-EA1.zip">kvasir-generic-3.0.0-EA1</a>をダウンロードして下さい。バイナリアーカイブを解凍するとkvasir.warというWARファイルができますので、これをサーブレットコンテナに配備します。例えばTomcatであれば、<em>CATALINA_HOME</em>/webappsにkvasir.warをコピーします。（<em>CATALINA_HOME</em>はTomcatのインストールディレクトリとします。）</p>
-<p>これでインストールは完了です。サーブレットコンテナを起動してトップページにアクセスすると、以下のようなWebサイトのトップページが表示されます。</p>
-<p><img alt="" src="images/install-001.jpg" /></p>
-<p>表示されない場合はkvasir.warの配備に失敗しています。設定を確認して下さい。</p>
-<p>あとはサイト管理ツールを使ってWebサイトにコンテンツを配置したり外観をカスタマイズしたり機能を追加したりしてオリジナルのWebサイトを構築して下さい。Webサイトのカスタマイズ方法については、まず<a href="gettingstarted.html">始めてみよう</a>を読んでみて下さい。</p>
-<p>Enjoy Kvasir/Sora!</p>
-</div>
+            <h3>準備</h3>
+            <p>Kvasir/Sora を利用するには次のものが必要です。</p>
+            <dl>
+              <dt>JDK</dt><dd>JDK1.4.2以上</dd>
+              <dt>サーブレットコンテナ</dt><dd>ServletAPI2.3準拠のサーブレットコンテナ</dd>
+              <dt>DBMS</dt><dd>HSQLDB1.8.0.1以上（同梱）</dd>
+            </dl>
+            <div class="notice">
+            現在、Sun JDK1.4.2_08 と Apache Tomcat5.0.30 で動作を確認しています。
+            DBMSはMySQL、PostgreSQLでも動作が可能なように実装されていますが、
+            現在のところDBMSを切り替える機能が未実装のためHSQLDBが使用されます。
+            またHSQLDB以外のDBMSでの動作確認は行なっていません。
+            </div>
+            
+            <h3>インストール</h3>
+            <p>
+            まずKvasir/Soraのバイナリアーカイブ
+            <a href="http://maven.seasar.org/maven2/org/seasar/kvasir/dist/kvasir-generic/3.0.0-EA1/kvasir-generic-3.0.0-EA1.zip">
+            kvasir-generic-3.0.0-EA1
+            </a>
+            をダウンロードして下さい。
+            バイナリアーカイブを解凍するとkvasir.warというWARファイルができますので、これをサーブレットコンテナに配備します。
+            例えばTomcatであれば、<em>CATALINA_HOME</em>/webappsにkvasir.warをコピーします。
+            (<em>CATALINA_HOME</em>はTomcatのインストールディレクトリとします)
+            </p>
+            <p>これでインストールは完了です。サーブレットコンテナを起動してトップページにアクセスすると、
+            以下のようなWebサイトのトップページが表示されます。
+            </p>
+            <p class="thumbnail">
+              <img alt="" src="images/thumbnails/thumbnail-install-001.jpg" />
+            </p>
+            <p>表示されない場合はkvasir.warの配備に失敗しています。設定を確認して下さい。</p>
+            <p>あとはサイト管理ツールを使ってWebサイトにコンテンツを配置したり外観をカスタマイズしたり機能を追加したりしてオリジナルのWebサイトを構築して下さい。Webサイトのカスタマイズ方法については、まず<a href="gettingstarted.html">始めてみよう</a>を読んでみて下さい。</p>
+            <p>Enjoy Kvasir/Sora!</p>
+          </div>
+        </div>
+        
+        <div class="right">
+          <h2>Contents</h2>
+          <div class="desc">
+            <ul>
+              <li><a href="install.html">インストール</a></li>
+              <li><a href="gettingstarted2.html">始めてみよう</a></li>
+              <li>基礎知識
+                <ul>
+                  <li><a href="variant.html">バリアント</a></li>
+                  <li><a href="pageobject.html">Page オブジェクト</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> <!-- end of main directive -->
+      <div id="footer">
+        Copyright &copy; 2005 The Seasar Foundation and the others, All rights reserved.
+      </div>
+    </div> <!-- end of wrapper directive -->
+  </body>
 </html>
