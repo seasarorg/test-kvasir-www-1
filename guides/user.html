@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+    <style type="text/css">
+      <!--
+        @import url(../style.css);
+      //-->
+    </style>
+    <title>Seasar Kvasir/Sora Project Web Site</title>
+  </head>
+  <body>
+    <div id="wrapper">
+ 
+      <div id="header">
+        <img class="kvasir" src="../images/kvasir-icon-edged.gif" alt="kvasir"/>
+        <div id="title">&nbsp;Seasar Kvasir/Sora Project</div>
+        <div id="menu">
+        <!--
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">about Kvasir3</a></li>
+              <li><a href="/">Download</a></li>
+              <li><a href="/">Documents</a></li>
+              <li><a href="/">NEWS</a></li>
+              <li><a href="/">License</a></li>
+              <li><a href="/">Project</a></li>
+            </ul>
+          //-->
+          </div>
+      </div>
+
+      <div id="main">
+      <h1>Seasar Kvasir/Sora</h1>
+        <div class="left">
+        <h2>ユーザ・グループ・ロールの追加</h2>
+        <div class="desc">
+          <h4>ユーザを追加する</h4>
+          <p>
+          Kvasir/SoraではユーザもPageオブジェクトの一種ですので、
+          ユーザを追加するにはPageオブジェクトツリーにユーザオブジェクトを追加することになります。
+          </p>
+          <p>
+          ユーザオブジェクトは通常/usersディレクトリ以下に配置します。
+          ツリーペインで/usersディレクトリをクリックして詳細ペインに一覧画面を表示して下さい。
+          「追加するものを選択...」と書かれているドロップダウンリストから「ユーザ」を選択すると、
+          ユーザの追加フォームが表示されます。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-039.jpg" /></p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-040.jpg" /></p>
+          <p>
+          追加したいユーザのアカウント、名前、説明を入力して「追加」ボタンを押して下さい。
+          追加してから編集する場合は「追加して編集」ボタンを押して下さい。
+          ここでは、アカウントに「test」、名前に「テストユーザ」と入力してみます。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-041.jpg" /></p>
+          <p>
+          追加したユーザのパスワードはデフォルトでは空になっています。
+          Kvasir/Soraではパスワードが空のユーザはログインできないため、
+          追加後に基本項目タブでパスワードを設定して下さい。
+          パスワードとしては大抵の半角文字が使用できますが、次のパスワードは特別な意味を持ちます。
+          </p>
+          <dl>
+            <dt>*</dt><dd>任意のパスワード文字列にマッチします。</dd>
+            <dt>（空文字列）</dt><dd>どのパスワード文字列ともマッチしません。</dd>
+          </dl>
+          
+          <h4>グループを追加する</h4>
+          <p>
+          Kvasir/SoraではグループもPageオブジェクトの一種ですので、
+          グループを追加するにはPageオブジェクトツリーにグループオブジェクトを追加することになります。
+          </p>
+          <p>
+          グループオブジェクトは通常/groupsディレクトリ以下に配置します。
+          ツリーペインで/groupsディレクトリをクリックして詳細ペインに一覧画面を表示して下さい。
+          「追加するものを選択...」と書かれているドロップダウンリストから「グループ」を選択すると、
+          グループの追加フォームが表示されます。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-042.jpg" /></p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-043.jpg" /></p>
+          <p>
+          追加したいグループのアカウント、名前、説明を入力して「追加」ボタンを押して下さい。
+          追加してから編集する場合は「追加して編集」ボタンを押して下さい。
+          ここでは、アカウントに「test」、名前に「テストグループ」と入力してみます。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-044.jpg" /></p>
+          <p>
+          作成したグループに先ほど追加したユーザ「test」を追加してみましょう。
+          /groups/testの詳細画面を詳細ペインに表示して、ユーザ設定タブをクリックして下さい。
+          このグループに所属させたいユーザ(今の場合は/users/test)
+          をリストボックスで選択状態にして「変更を保存」ボタンを押して下さい。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-045.jpg" /></p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-046.jpg" /></p>
+          
+          <h4>ロールを追加する</h4>
+          <p>
+          Kvasir/SoraではロールもPageオブジェクトの一種ですので、
+          ロールを追加するにはPageオブジェクトツリーにロールオブジェクトを追加することになります。
+          </p>
+          <p>
+          ロールオブジェクトは通常/rolesディレクトリ以下に配置します。
+          ツリーペインで/rolesディレクトリをクリックして詳細ペインに一覧画面を表示して下さい。
+          「追加するものを選択...」と書かれているドロップダウンリストから「ロール」を選択すると、
+          ロールの追加フォームが表示されます。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-047.jpg" /></p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-048.jpg" /></p>
+          <p>
+          追加したいロールのアカウント、名前、説明を入力して「追加」ボタンを押して下さい。
+          追加してから編集する場合は「追加して編集」ボタンを押して下さい。
+          ここでは、アカウントに「test」、名前に「テストロール」と入力してみます。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-049.jpg" /></p>
+          <p>
+          作成したロールを先ほど追加したユーザ「test」に割り当ててみましょう。
+          /user/testの詳細画面を詳細ペインに表示して、ロール設定タブをクリックして下さい。
+          このユーザに割り当てたいロール(今の場合は/roles/test)をリストボックスで選択状態にして
+          「変更を保存」ボタンを押して下さい。
+          </p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-050.jpg" /></p>
+          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-051.jpg" /></p>
+          </div> 
+        </div>
+
+        <div class="right">
+          <h2>Contents</h2>
+          <div class="desc">
+            <ul>
+              <li><a href="install.html">インストール</a></li>
+              <li><a href="gettingstarted.html">始めてみよう</a></li>
+              <li><a href="user.html">ユーザ・グループ・ロールの追加</a></li>
+              <li>基礎知識
+                <ul>
+                  <li><a href="variant.html">バリアント</a></li>
+                  <li><a href="pageobject.html">Page オブジェクト</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> <!-- end of main directive -->
+      <div id="footer">
+        Copyright &copy; 2005 The Seasar Foundation and the others, All rights reserved.
+      </div>
+    </div> <!-- end of wrapper directive -->
+</html>
