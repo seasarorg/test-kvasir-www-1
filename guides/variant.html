@@ -15,17 +15,15 @@
         <img class="kvasir" src="../images/kvasir-icon-edged.gif" alt="kvasir"/>
         <div id="title">&nbsp;Seasar Kvasir/Sora Project</div>
         <div id="menu">
-        <!--
-          <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">about Kvasir3</a></li>
-              <li><a href="/">Download</a></li>
-              <li><a href="/">Documents</a></li>
-              <li><a href="/">NEWS</a></li>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <!-- <li><a href="/">about Kvasir3</a></li>
+              <li><a href="/">Download</a></li> //-->
+              <li><a href="/guides/install.html">Documents</a></li>
+              <!-- <li><a href="/">NEWS</a></li>
               <li><a href="/">License</a></li>
-              <li><a href="/">Project</a></li>
+              <li><a href="/">Project</a></li> //-->
             </ul>
-          //-->
           </div>
       </div>
 
@@ -35,21 +33,37 @@
 
         <div class="left">
         <h2>バリアント</h2>
+          <div class="desc">
           <p>バリアントは、属性値を多重に持つような属性における、それぞれの属性値を区別するためのキー文字列です。</p>
-          <p>例えば、Pageオブジェクトのpropertyアビリティでは、プロパティ名に対応する値を多重に持てるようになっています。多重に持つ値を区別するためのキー文字列がバリアントです。以下は多重に値を持つプロパティの例です：</p>
+          <p>
+          例えば、Pageオブジェクトのpropertyアビリティでは、
+          プロパティ名に対応する値を多重に持てるようになっています。
+          多重に持つ値を区別するためのキー文字列がバリアントです。以下は多重に値を持つプロパティの例です：</p>
           <dl>
             <dt>プロパティ名</dt><dd>name</dd>
             <dt>バリアント「ja」に対応する値</dt><dd>しーさー</dd>
             <dt>バリアント「en」に対応する値</dt><dd>Seasar</dd>
           </dl>
-          <p>バリアントは基本的にアルファベットやアンダースコアから成る文字列ですが、長さ0の文字列とすることもできます。これを「デフォルトバリアント」と言います。属性が多重に値を持つ場合は必ずデフォルトバリアントに対応する値を持つようにします。</p>
-          <p>バリアントは主に国際化対応のために使われます。現在のロケールに対応する値を取得する場合、ロケールが表す文字列をバリアントとみなして値を検索します。値が見つからない場合はデフォルトバリアントに対応する値が使われます。</p>
-          <p>この検索処理はjava.util.ResourceBundle#getBundle()と非常に似ています。例えばロケールがja_JPである場合、次の順に値が検索されます。</p>
+          <p>
+          バリアントは基本的にアルファベットやアンダースコアから成る文字列ですが、
+          長さ0の文字列とすることもできます。これを「デフォルトバリアント」と言います。
+          属性が多重に値を持つ場合は必ずデフォルトバリアントに対応する値を持つようにします。
+          </p>
+          <p>
+          バリアントは主に国際化対応のために使われます。
+          現在のロケールに対応する値を取得する場合、ロケールが表す文字列をバリアントとみなして値を検索します。
+          値が見つからない場合はデフォルトバリアントに対応する値が使われます。
+          </p>
+          <p>
+          この検索処理はjava.util.ResourceBundle#getBundle()と非常に似ています。
+          例えばロケールがja_JPである場合、次の順に値が検索されます。
+          </p>
           <ol>
             <li>ja_JP</li>
             <li>ja</li>
             <li>(デフォルトバリアント)</li>
           </ol>
+          </div>
         </div>
         <div class="right">
           <h2>Contents</h2>

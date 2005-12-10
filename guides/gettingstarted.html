@@ -16,17 +16,15 @@
         <img class="kvasir" src="../images/kvasir-icon-edged.gif" alt="kvasir"/>
         <div id="title">&nbsp;Seasar Kvasir/Sora Project</div>
         <div id="menu">
-        <!--
-          <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">about Kvasir3</a></li>
-              <li><a href="/">Download</a></li>
-              <li><a href="/">Documents</a></li>
-              <li><a href="/">NEWS</a></li>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <!-- <li><a href="/">about Kvasir3</a></li>
+              <li><a href="/">Download</a></li> //-->
+              <li><a href="/guides/install.html">Documents</a></li>
+              <!-- <li><a href="/">NEWS</a></li>
               <li><a href="/">License</a></li>
-              <li><a href="/">Project</a></li>
+              <li><a href="/">Project</a></li> //-->
             </ul>
-          //-->
           </div>
       </div>
 
@@ -38,19 +36,22 @@
             <p>
             Kvasir/Sora CMSはKvasir/Sora Base上に構築された、拡張性の高いコンテンツ管理システムです
             (以下、混乱の恐れがない場合はKvasir/Sora CMSを単にKvasir/Soraと記述します)。
-            この文書では、Kvasir/Soraで提供される「サイト管理ツール」を使って、
+            この文書では、Kvasir/Soraが初期状態で提供するサイトと付属の「サイト管理ツール」を使って、
             オリジナルのWebサイトを構築する方法を説明します。
             </p>
             <h3>インストール</h3>
             <p>
             インストールの方法については<a href="install.html">インストール</a>を参照して下さい。
-            以下、サイトトップのURLをhttp://localhost:8080/kvasirとして説明します。
             </p>
+            <div class="notice">以下、サイトトップのURLをhttp://localhost:8080/kvasirとして説明します。</div>
           </div>
 
           <div class="desc">
             <h3>サイト管理ツール</h3>
-            <p>サイト管理ツールは、WebサイトやKvasir/Soraの設定をWebブラウザからカスタマイズするためのツールです。</p>
+            <p>
+            サイト管理ツールは、WebサイトやKvasir/Soraの設定を
+            Webブラウザからカスタマイズするためのツールです。
+            </p>
             <p>
             サイト管理ツールはサイト管理者（administrator）だけが使用することができますが、
             インストール直後の状態ではサイト管理者のパスワードが設定されていませんので、
@@ -59,7 +60,7 @@
             <p>
             サイト管理ツールの画面を表示するには以下のURLにアクセスしてください。
             </p>
-            <p>
+            <p class="code">
             http://localhost:8080/kvasir/manage
             </p>
             <div class="notice">
@@ -69,126 +70,220 @@
             
           </div>
           <div class="desc">
-            <p>認証ダイアログが表示されますので、ユーザ名に「administrator」、パスワードに何も入力せずに「OK」ボタンを押して下さい。</p>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-001.jpg" /></p>
+            <p>
+            認証ダイアログが表示されますので、ユーザ名に「administrator」、
+            パスワードに何も入力せずに「OK」ボタンを押して下さい。
+            </p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-001.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-001.jpg" />
+              </a>
+            </p>
             <p>すると管理ツールのトップ画面が表示されます。</p>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-002.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-002.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-002.jpg" />
+              </a>
+            </p>
             <p>
             サイト管理ツールは「タイトルペイン」「ツリーペイン」「詳細ペイン」の3つのペインに分かれています。
             タイトルペインは上部のペインで、ここにはいくつかのメニューを選択可能なドロップダウンリストがあります
-            (注意：3.0.0-EA1ではほとんど全てのメニューは未実装です）。
+            (注意：3.0.0-EA1ではほとんど全てのメニューは未実装です)。
             </p>
             <p>
-            ツリーペインは左側のペインで、ここにはPageオブジェクトのツリーが表示されています。
-            ツリーペインにあるPageツリーのアイコンをクリックすると、
-            詳細ペインにPageオブジェクトの詳細情報が表示されます。</p>
-            <p>
-            詳細ペインは右側のペインで、ここには現在注目しているPageオブジェクトや現在行なっている操作に関する詳細情報が表示されます。
+            ツリーペインは左側のペインで、ここにはPageオブジェクトがツリー構造で表示されています。
+            ツリーペインにあるPageオブジェクトツリーの各アイコンをクリックすると、
+            右側の詳細ペインに選択したPageオブジェクトの詳細情報が表示されます。
             </p>
-            <p>詳細ペインには通常複数のタブが表示されています：</p>
+            <div class="notice">
+            Pageオブジェクトについては「<a href="pageobject.html">Pageオブジェクト</a>」を参照してください。
+            </div>
+            <p>
+            詳細ペインは右側のペインで、ここには現在選択しているPageオブジェクトの詳細や、
+            行なっている操作に関する詳細情報が表示されます。
+            </p>
+            <p>詳細ペインの上部には通常、複数のタブが表示されています：</p>
             <dl>
-              <dt>プレビュー</dt><dd>Pageにリクエストがあった場合の表示を行ないます。</dd>
-              <dt>基本項目</dt><dd>基本項目を表示したり編集したりする画面です。</dd>
+              <dt>プレビュー</dt><dd>Pageオブジェクトにリクエストがあった場合の表示を行ないます</dd>
+              <dt>基本項目</dt><dd>基本項目を表示したり編集したりする画面です</dd>
             </dl>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-003.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-003.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-003.jpg" />
+              </a>
+            </p>
             <dl>
-              <dt>プロパティ</dt><dd>プロパティを表示したり編集したりする画面です。</dd>
+              <dt>プロパティ</dt><dd>プロパティを表示したり編集したりする画面です</dd>
             </dl>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-004.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-004.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-004.jpg" />
+              </a>
+            </p>
             <dl>
-              <dt>操作権限</dt><dd>Pageオブジェクトに対する操作権限を表示したり編集したりする画面です。</dd>
+              <dt>操作権限</dt><dd>Pageオブジェクトに対する操作権限を表示したり編集したりする画面です</dd>
             </dl>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-005.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-005.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-005.jpg" />
+              </a>
+            </p>
             <dl>
-              <dt>本文</dt><dd>本文を表示したり編集したりする画面です。</dd>
+              <dt>本文</dt><dd>本文を表示したり編集したりする画面です</dd>
             </dl>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-006.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-006.jpg">           
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-006.jpg" />
+              </a>
+            </p>
             <dl>
-              <dt>テンプレート</dt><dd>テンプレートを表示したり編集したりする画面です。</dd>
+              <dt>テンプレート</dt><dd>テンプレートを表示したり編集したりする画面です</dd>
             </dl>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-007.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-007.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-007.jpg" />
+              </a>
+            </p>
             <dl>
-              <dt>一覧</dt><dd>子Pageの一覧を表示する画面です。</dd>
+              <dt>一覧</dt><dd>子Pageの一覧を表示する画面です</dd>
             </dl>
-            <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-008.jpg" /></p>
+            <p class="thumbnail">
+              <a class="largeImage" href="images/gettingstarted-008.jpg">
+                <img alt="" src="images/thumbnails/thumbnail-gettingstarted-008.jpg" />
+              </a>
+            </p>
         </div>
 
         <div class="desc">
           <h3>サイトのカスタマイズ</h3>
-          <p>以下、管理ツールを使ってWebサイトのカスタマイズを行なってみましょう。</p>
+          <p>それでは、管理ツールを使ってWebサイトのカスタマイズを行なってみましょう。</p>
           
           <h4>サイトのタイトルやフッタを変更する</h4>
           <p>
           まずは簡単なところから、サイトのトップページにあるタイトルやページのフッタを変更してみましょう。
-          タイトルやフッタはルートPageオブジェクトのプロパティを設定することで変更することができます。
+          タイトルやフッタはルートPageオブジェクトのプロパティとしてあらかじめ準備されています。
+          このプロパティの値を変更することで、記述内容を変更することができます。
           </p>
-          <p>現在設定可能なプロパティは以下の通りです。</p>
+          <p>
+          現在、サイト全体に適用される記述内容として変更可能なプロパティは以下の通りです。
+          </p>
           <dl>
-            <dt>site.html-title</dt><dd>HTML形式のタイトル。主にトップページのタイトルとして使われます。</dd>
-            <dt>site.title</dt><dd>プレーンテキスト形式のタイトル。主にページのヘッダ部に表示されるタイトルとして使われます。</dd>
-            <dt>site.footer</dt><dd>プレーンテキスト形式のフッタ。ページのフッタ部に表示されます。</dd>
+            <dt>site.html-title</dt><dd>HTML形式のタイトル : 主にトップページのタイトルとして使われます</dd>
+            <dt>site.title</dt><dd>プレーンテキスト形式のタイトル : 主にページのヘッダ部に表示されるタイトルとして使われます</dd>
+            <dt>site.footer</dt><dd>プレーンテキスト形式のフッタ : ページのフッタ部に表示されます</dd>
           </dl>
           <p>
           例えばトップページのタイトルを変更するには、
-          まず管理ツールのツリーペインでルートPageアイコンをクリックします。
-          詳細ペインにルートPageが持つPageの一覧が表示されるので、プロパティタブをクリックして下さい。
-          右上の「プロパティを追加」ボタンを押すとプロパティの追加フォームが表示されますので、
-          名前に「site.html-title」、値に例えば「&lt;span style=&quot;font-size:small&quot;&gt;小心者&lt;/span&gt;のWebサイト」
-          と入力して「追加」ボタンを押して下さい。
+          まず管理ツールのツリーペインで「(ルート)」と書かれたPageオブジェクトのアイコンをクリックします。
+          (詳細ペインにルートPageオブジェクトが保有しているPageオブジェクトの一覧が表示されます)
+          ここでプロパティタブをクリックして下さい。
+          右上の「プロパティを追加」ボタンを押すとプロパティの追加フォームが表示されます。
+          フォームには名前欄に「site.html-title」、
+          値欄には例えば「&lt;span style=&quot;font-size:small&quot;&gt;小心者&lt;/span&gt;のWebサイト」
+          などと入力して「追加」ボタンを押して下さい。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-009.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-010.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-009.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-009.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-010.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-010.jpg" />
+            </a>
+          </p>
           <p>プレビュータブを押してみると、トップページのタイトルが変更されていることが分かります。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-011.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-011.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-011.jpg" />
+            </a>
+          </p>
           <p>
-          なお国際化対応のため、プロパティにはプロパティ名毎に複数の値を持たせることができるようになっています。
+          なお国際化に対応するため、プロパティには複数の値を持たせることができるようになっています。
           国際化に対応したWebサイトを構築したい場合は、
           デフォルトバリアントに対応する値として英語の文字列を持たせた上で、
           サポートするロケール毎にバリアントを追加して英語以外の文字列を持たせるようにして下さい。
+          (詳しくは<a href="variant.html">バリアント</a>の項を参照ください)。
           </p>
+          
           <h4>スタイルシートを変更する</h4>
           <p>
-          スタイルシートはパスアカウントが/style.cssであるPageオブジェクトの本文として存在していますので、
-          このPageの本文を変更することでサイトのスタイルシートを変更することができます。
+          ページの色などを変更したい場合にはスタイルシートを変更します。
+          Kvasir/Sora CMSのデフォルトサイトにおけるスタイルシートは、
+          パスアカウント「/style.css」として準備されています。
+          この/style.css Pageオブジェクトの本文がスタイルシートの本体です。
           </p>
           <p>
-          管理ツールのツリーペインで、ルートPageアイコンの左側の「+」マークをクリックして下さい。
-          ルートPageの子Pageが展開表示されます。
+          管理ツールのツリーペインで、ルートPageアイコンの左側の「+」マークをクリックすると
+          ルートの子Pageオブジェクトが展開表示されます。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-012.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-012.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-012.jpg" />
+            </a>
+          </p>
           <p>
-          その中にstyle.cssというアカウントのアイコンがありますので、クリックして下さい。
+          その中に「style.css」というアカウントのアイコンがありますので、これをクリックして下さい。
           詳細ペインに基本項目の編集フォームが表示されます。
           本文タブをクリックして本文の編集フォームを表示させ、
-          テキストエリアの内容を編集して「更新」または「上書き」ボタンを押して下さい。
+          テキストエリアの内容を編集(ここではスタイルシートの記述)して
+          「更新」または「上書き」ボタンを押して下さい。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-013.jpg" /></p>
-          <p>
-          ボタンが2つあるのは、Kvasir/Soraでは本文をリビジョン管理しているためです。
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-013.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-013.jpg" />
+            </a>
+          </p>
+          <div class="notice">
+          「更新」と「上書き」という似たようなボタンが2つあるのは、
+          Kvasir/Sora CMS がPageオブジェクトのcontent (本文) をリビジョン管理しているためです。
           「更新」を押した場合、本文のリビジョンが更新され、現在の本文が過去のリビジョンとして残されます。
-          「上書き」を押した場合、現在の本文自体が変更され、リビジョンは更新されません。
-          </p>
+          「上書き」を押した場合、現在のリビジョンの本文自体が変更され、リビジョンは更新されません。
+          </div>
+
           <h4>ディレクトリを追加する</h4>
           <p>
-          ルートディレクトリにディレクトリを追加してみましょう。
-          ツリーペインでディレクトリを追加したいディレクトリ(この場合はルートディレクトリ)
-          のアイコンをクリックして下さい。
-          詳細ペインに子Pageの一覧が表示されます。
+          ディレクトリの追加は詳細ペインから行います。
+          ここではルートディレクトリにディレクトリを追加してみましょう。
+          ツリーペインでディレクトリを追加したいディレクトリ
+          (この場合はルートディレクトリ)のアイコンをクリックして下さい。
+          詳細ペインに子Pageオブジェクトの一覧が表示されます。
           「追加するものを選択...」と書かれているドロップダウンリストから
           「ディレクトリ」を選択すると、ディレクトリの追加フォームが表示されます。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-014.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-014.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-014.jpg" />
+            </a>
+          </p>
           <p>
           追加したいディレクトリのアカウント、名前、説明を入力して「追加」ボタンを押して下さい。
           追加してから編集する場合は「追加して編集」ボタンを押して下さい。
           ここでは、アカウントに「diary」、名前に「日記」、説明に「日記です。」と入力してみます。
+          アカウントはURLの一部として利用されますので、慎重に名前をつけてください。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-015.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-016.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-015.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-015.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-016.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-016.jpg" />
+            </a>
+          </p>
           <p>追加したディレクトリの詳細ペインでプレビュータブをクリックすると、ディレクトリの見え方を確認することができます。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-017.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-017.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-017.jpg" />
+            </a>
+          </p>
           <p>また、トップページには追加したディレクトリへのリンクが表示されます。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-018.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-018.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-018.jpg" />
+            </a>
+          </p>
           <p>
           国際化に対応したWebサイトを構築したい場合は、名前や説明を複数の言語で持たせる必要があります。
           基本項目タブで設定できる名前や説明は内部的にはそれぞれ「name」「description」という名前のプロパティですので、
@@ -203,23 +298,43 @@
           「追加するものを選択...」と書かれているドロップダウンリストから
           「ページ」を選択すると、ページの追加フォームが表示されます。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-019.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-019.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-019.jpg" />
+            </a>
+          </p>
           <p>
           追加したいページのアカウント、名前、説明を入力して「追加」ボタンを押して下さい。
           追加してから編集する場合は「追加して編集」ボタンを押して下さい。
           ここでは、アカウントに「2005-11-15」、名前に「2005年11月15日」と入力してみます。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-020.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-021.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-020.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-020.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-021.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-021.jpg" />
+            </a>
+          </p>
           <p>追加したページの詳細ペインでプレビュータブをクリックすると、ページの見え方を確認することができます。</p>
-          <p class="thumbnail"><a href="images/thumbnails/thumbnail-gettingstarted-022jpg">images/thumbnails/thumbnail-gettingstarted-022jpg</a></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-022.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-022.jpg" />
+            </a>
+          </p>
           
-          <h4>ページの本文を追加する - テキスト文書</h4>
+          <h5>ページの本文を追加する - テキスト文書</h5>
           <p>
           このままでは本文がありませんので、次に本文を追加します。
           追加したページの詳細ペインで本文タブをクリックして下さい。本文の編集フォームが表示されます。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-023.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-023.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-023.jpg" />
+            </a>
+          </p>
           <p>
           本文の編集フォームでは本文の他に
           「文書タイプ」「メディアタイプ」「エンコーディング」「バリアント」を指定できます。
@@ -256,22 +371,38 @@
           <p>
           バリアントは、複数の本文を扱うためのキー文字列です。
           何も指定しないとデフォルトバリアントを指定したのと同じになります。
-          主に国際化対応のため、Kvasir/Soraでは1つのPageオブジェクトに複数の本文を持たせることができるようになっています。
+          プロパティと同様に、Kvasir/Soraでは1つのPageオブジェクトに複数の本文を持たせることができるようになっています。
           国際化に対応したWebサイトを構築したい場合は、デフォルトバリアントに対応する本文として英語の本文を持たせた上で、
           サポートするロケール毎にバリアントを追加して英語以外の本文を持たせるようにして下さい。
           </p>
           <p>追加したい本文をテキストエリアに書いたら「追加」ボタンを押して下さい。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-024.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-024.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-024.jpg" />
+            </a>
+          </p>
           <p>追加したページの詳細ペインでプレビュータブをクリックすると、ページの見え方を確認することができます。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-025.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-025.jpg">            
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-025.jpg" />
+            </a>
+          </p>
           
-          <h4>ページの本文を追加する - バイナリファイル</h4>
+          <h5>ページの本文を追加する - バイナリファイル</h5>
           <p>画像のような、サイト共通フレームに埋め込まない形で表示するタイプのページを作ってみます。</p>
           <p>まずはページを追加して下さい。例えばアカウントが「image.gif」であるようなページをルートディレクトリ直下に追加してみて下さい。</p>
           <p>次に、追加したページの本文タブをクリックして下さい。本文の編集フォームが表示されます。</p>
           <p>文書タイプとして「ファイル」を選んで「変更を保存」ボタンを押して下さい。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-026.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-027.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-026.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-026.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-027.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-027.jpg" />
+            </a>
+          </p>
           <p>
           文書タイプを変更したら、下のほうにあるアップロードフォームを使って本文を設定します。
           バイナリファイルをアップロードする時は、通常は「ファイル」だけを指定すれば構いません
@@ -279,10 +410,22 @@
           ここではファイルとして適当なJPEGファイルを指定することにします。
           </p>
           <p>ファイルを指定したら「アップロード」ボタンを押して下さい。指定したファイルの内容を本文として持つようになります。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-028.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-029.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-028.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-028.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-029.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-029.jpg" />
+            </a>
+          </p>
           <p>追加したページの詳細ペインでプレビュータブをクリックすると、ページの見え方を確認することができます。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-030.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-030.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-030.jpg" />
+            </a>
+          </p>
           
           <h4>Pageオブジェクトを削除する</h4>
           <p>
@@ -290,9 +433,21 @@
           Pageオブジェクト一覧を表示して下さい。
           </p>
           <p>削除したいPageオブジェクトにチェックをつけて「削除」ボタンを押すと、チェックのついたPageオブジェクトが削除されます。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-031.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-032.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-033.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-031.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-031.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-032.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-032.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-033.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-033.jpg" />
+            </a>
+          </p>
           
           <h4>ページの見た目を変更する</h4>
           <p>
@@ -304,7 +459,11 @@
           管理ツールの詳細ペインにページ/diary/2005-11-15を表示してテンプレートタブをクリックして下さい。
           テンプレートの編集フォームが表示されます。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-034.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-034.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-034.jpg" />
+            </a>
+          </p>
           <p>
           フォームには既に何やらテンプレートが書かれていますが、これはデフォルトのテンプレートです。
           よく見ると、説明文に
@@ -349,8 +508,16 @@
           Webブラウザにはロケールに応じたページの本文が表示されることになります。
           </p>
           <p>「追加」ボタンを押すとこのページの見た目が変更されます。</p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-035.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-036.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-035.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-035.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-036.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-036.jpg" />
+            </a>
+          </p>
           <p>
           今まではデフォルトのテンプレートである/templates/pageを使って表示されていましたが、
           ページに追加したテンプレートを使って表示されるようになります。
@@ -358,7 +525,11 @@
           (ブラウザがキャッシュしている場合は期待通りの表示がされないことがあります。
           その場合は例えばIEやFirefoxではF5キーを押して表示を更新してみて下さい)。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-037.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-037.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-037.jpg" />
+            </a>
+          </p>
           
           <h4>サイトの共通フレームを変更する</h4>
           <p>
@@ -367,7 +538,11 @@
           共通フレームを持っているのは「/templates/frame」Pageオブジェクトですので、
           このPageオブジェクトについてテンプレートタブをクリックして、内容を編集して下さい。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-038.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-038.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-038.jpg" />
+            </a>
+          </p>
           <p>
           /templates以下にはいろいろなテンプレートを持つPageオブジェクトがあります。
           以下にパスアカウントとテンプレートの種類の対応を挙げておきます。
@@ -387,21 +562,36 @@
           <h4>ページのアクセス権限を設定する</h4>
           <p>
           Kvasir/Soraではページ毎にアクセス権限を設定することができます。
-          ここでは、先ほど追加したロール/roles/testを持つユーザだけが日記「2005-11-15」を閲覧できるようにしてみましょう。
+          ここでは、ロール/roles/testを持つユーザだけが日記「2005-11-15」を閲覧できるようにしてみましょう。
+          <div class="notice">
+          ユーザ・グループ・ロールを追加する方法は「<a href="user.html">ユーザ・グループ・ロールの追加</a>」を参照してください。
+          </div>
           </p>
           <p>
           日記「2005-11-15」をツリーペインでクリックして詳細ペインに日記
           「2005-11-15」の詳細を表示させ、
           操作権限タブをクリックして操作権限の設定フォームを表示させて下さい。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-052.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-052.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-052.jpg" />
+            </a>
+          </p>
           <p>
           Kvasir/Soraに登録されているロールの一覧が表示されますので、
           ロール/roles/testのアクセス権限だけを「参照」に、
           それ以外のロールのアクセス権限を「なし」にして「変更を保存」ボタンを押して下さい。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-053.jpg" /></p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-054.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-053.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-053.jpg" />
+            </a>
+          </p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-054.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-054.jpg" />
+            </a>
+          </p>
           <p>
           これでこのページはロール/roles/testを持つユーザだけが閲覧可能になりました。
           試しにログインせずにこのページを表示すると、
@@ -411,7 +601,11 @@
           (ブラウザがキャッシュしている場合は期待通りの表示がされないことがあります。
           その場合は例えばIEやFirefoxではF5キーを押して表示を更新してみて下さい)。
           </p>
-          <p class="thumbnail"><img alt="" src="images/thumbnails/thumbnail-gettingstarted-055.jpg" /></p>
+          <p class="thumbnail">
+            <a class="largeImage" href="images/gettingstarted-055.jpg">
+              <img alt="" src="images/thumbnails/thumbnail-gettingstarted-055.jpg" />
+            </a>
+          </p>
           </div>
         </div>
         <div class="right">

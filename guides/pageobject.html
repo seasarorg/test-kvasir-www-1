@@ -15,17 +15,15 @@
         <img class="kvasir" src="../images/kvasir-icon-edged.gif" alt="kvasir"/>
         <div id="title">&nbsp;Seasar Kvasir/Sora Project</div>
         <div id="menu">
-        <!--
-          <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">about Kvasir3</a></li>
-              <li><a href="/">Download</a></li>
-              <li><a href="/">Documents</a></li>
-              <li><a href="/">NEWS</a></li>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <!-- <li><a href="/">about Kvasir3</a></li>
+              <li><a href="/">Download</a></li> //-->
+              <li><a href="/guides/install.html">Documents</a></li>
+              <!-- <li><a href="/">NEWS</a></li>
               <li><a href="/">License</a></li>
-              <li><a href="/">Project</a></li>
+              <li><a href="/">Project</a></li> //-->
             </ul>
-          //-->
           </div>
       </div>
 
@@ -37,36 +35,86 @@
         <h2>Page オブジェクト</h2>
           <div id="update"><img src="../images/date-update-transparent.gif"/>&nbsp;Dec 5, 2005</div>
           <div class="desc">
-            <p>Kvasir/SoraではWebサイトが持つコンテンツツリーの各コンテンツと対応するように内部にPageオブジェクトのツリーを持っています。</p>
-            <p>PageオブジェクトはPageオブジェクト集合の中で一意な数値の識別子（id）を持つ一方で、同じ親Pageオブジェクトを持つPageオブジェクト集合の中で一意な文字列の識別子（account、アカウント）を持ちます。</p>
-            <p>また、祖先PageのアカウントとPageのアカウントを'/'で連結した「/path/to/page」のような文字列（pathAccount、パスアカウント）でツリー内のページを指すことがあります。特に、パスアカウントはWebサイトへのリクエストを解釈する際に使用されます。例えばhttp://localhost:8080/kvasir/path/to/pageというURLへのリクエストに対しては、（サイトトップのURLであるhttp://localhost:8080/kvasirを除いた）/path/to/pageというパスアカウントを持つPageオブジェクトの内容をレスポンスとして返します。</p>
+            <p>
+            Kvasir/Sora CMSは、コンテンツ管理において「Pageオブジェクト」と呼ばれるオブジェクトを使用します。
+            PageオブジェクトはWebサイト上の各コンテンツと 1:1 で対応しています。
+            </p>
+            <p>
+            PageオブジェクトはPageオブジェクトの集合の中で一意な数値の識別子(id)を持つ一方で、
+            同じ親Pageオブジェクトを持つPageオブジェクト集合の中で一意な文字列の識別子（account、アカウント）を持ちます。
+            つまりJavaのpackageの概念と同じように、
+            同一の名前を持つPageオブジェクトでも親が違えば異なるものとして解釈されるということです。
+            </p>
+            <h3>基本属性</h3>
             <p>Pageオブジェクトは基本属性として次のものを持ちます：</p>
             <dl>
-              <dt>id</dt><dd>数値の識別子。</dd>
-              <dt>account</dt><dd>アカウント。</dd>
-              <dt>pathAccount</dt><dd>パスアカウント。</dd>
-              <dt>type</dt><dd>ページタイプ（後述）。</dd>
-              <dt>orderNumber</dt><dd>順序番号。同一親Pageに属するPageの標準の並び順を表します。</dd>
-              <dt>createDate</dt><dd>作成日時。</dd>
-              <dt>modifyDate</dt><dd>更新日時。</dd>
-              <dt>ownerUser</dt><dd>所有者。</dd>
-              <dt>concealed</dt><dd>不可視かどうか。不可視であるPageはリクエストに対してレスポンスを返しません。</dd>
+              <dt>id</dt><dd>数値の識別子</dd>
+              <dt>account</dt><dd>アカウント</dd>
+              <dt>pathAccount</dt><dd>パスアカウント (後述)</dd>
+              <dt>type</dt><dd>ページタイプ (後述)</dd>
+              <dt>orderNumber</dt><dd>順序番号 : 同一親Pageに属するPageの標準の並び順を表します</dd>
+              <dt>createDate</dt><dd>作成日時</dd>
+              <dt>modifyDate</dt><dd>更新日時</dd>
+              <dt>ownerUser</dt><dd>所有者</dd>
+              <dt>concealed</dt><dd>不可視かどうか : 不可視であるPageオブジェクトはリクエストに対してレスポンスを返しません</dd>
             </dl>
-            <p>Pageオブジェクトには種類（type、ページタイプ）があります。ページタイプは文字列で表されます。組み込みのページタイプとしては次のものがあります：</p>
+            <h3>Pageオブジェクトの種類</h3>
+            <p>
+            Pageオブジェクトには種類（type、ページタイプ）があります。
+            ページタイプは文字列で表されます。
+            Kvasir/Sora CMSに最初から準備されているページタイプとしては次のものがあります：</p>
             <dl>
-              <dt>page</dt><dd>ページ。通常のテキスト文書またはバイナリファイルを表します。</dd>
-              <dt>user</dt><dd>ユーザ。サイトの利用者を表します。</dd>
-              <dt>group</dt><dd>グループ。ユーザの集合を定義します。</dd>
-              <dt>role</dt><dd>ロール。ユーザやグループの役割を定義します。</dd>
-              <dt>directory</dt><dd>ディレクトリ。Pageオブジェクトの集合を定義します。</dd>
+              <dt>page</dt><dd>ページ : 通常のテキスト文書、またはバイナリファイルを表します</dd>
+              <dt>directory</dt><dd>ディレクトリ : Pageオブジェクトの集合を定義します</dd>
+              <dt>user</dt><dd>ユーザ : サイトの利用者を表します</dd>
+              <dt>group</dt><dd>グループ : ユーザの集合を定義します</dd>
+              <dt>role</dt><dd>ロール : ユーザやグループの役割を定義します</dd>
             </dl>
-            <p>ここで注意すべきなのは、ユーザやグループやロールといったオブジェクトもPageオブジェクトの一種であるということです。</p>
-            <p>Pageには様々な種類の拡張属性（ability、アビリティ）を持たせることができるようになっています。アビリティのいくつかは標準で組み込まれています。主な組み込みのアビリティとしては次のものがあります：</p>
+            <p>
+            ここで注意すべきなのは、ユーザやグループやロールといったオブジェクトもPageオブジェクトの一種であるということです。
+            </p>
+            <h3>パスアカウント</h3>
+            <p>
+            Pageオブジェクトは、祖先となるPageオブジェクトのアカウントと自身のPageのアカウントをスラッシュ文字('/')
+            で連結した「/path/to/page」のような文字列(pathAccount、「パスアカウント」と呼びます)
+            でツリー内のページを指定することができます。
+            </p>
+            <p>
+            この特徴は、Webサイトへのリクエストを解釈する際に使用されます。
+            例えば "http://localhost:8080/kvasir/path/to/page" というURLへのリクエストに対しては、
+            サイトトップのURLであるhttp://localhost:8080/kvasirを除いた
+            "/path/to/page" というパスアカウントを持つPageオブジェクトの内容をレスポンスとして返します。
+            </p>
+
+            <h3>拡張属性</h3>
+            <p>
+            Pageオブジェクトには様々な種類の拡張属性(ability、アビリティ)を持たせることができるようになっています。
+            アビリティのいくつかは標準で組み込まれています。
+            主な組み込みのアビリティとしては次のものがあります：</p>
             <dl>
-              <dt>property</dt><dd>プロパティ。key=value型の属性の集合。国際化されており、1つのkeyに対してロケール毎に値を持たせることができるようになっています。</dd>
-              <dt>content</dt><dd>本文。テキスト文書であったりバイナリデータであったりします。Kvasir/Soraではディレクトリにも本文を持たせることができます（！）。国際化されており、ロケール毎に本文を持たせることができるようになっています。</dd>
-              <dt>template</dt><dd>テンプレート。Pageの見え方を規定します。テンプレートの書式としてはMayaとZPT（Zope Page Template）を使用できますが、独自の書式のテンプレートを扱うように拡張することもできます。複数枚のテンプレートから表示をレンダリングするタイプのテンプレートエンジンに対応するために、1つのPageにつき複数枚のテンプレートを持たせることができるようになっています。テンプレートを持たないPageにはページタイプ毎のデフォルトテンプレートが適用されます。デフォルトテンプレートとしては「/templates/ページタイプ名」というパスアカウントを持つPageのテンプレートが使用されます。</dd>
+              <dt>property</dt><dd>プロパティ。key=value型の属性の集合。国際化対応として、
+              1つのkeyに対してロケール毎に値を持たせることができるようになっています</dd>
+              <dt>content</dt><dd>本文。テキスト文書であったりバイナリデータといった、
+              Pageオブジェクトの主となるコンテンツを記します。
+              contentはdirectoryタイプのPageオブジェクトも保持するため、
+              Kvasir/Sora CMSではディレクトリにも本文を持たせることができます(！)。
+              property同様、ロケール毎に本文を持たせることができるようになっています</dd>
+              <dt>template</dt><dd>テンプレート。Pageオブジェクトの「見え方」を規定します。
+              Kvasir/Sora CMSでは content + template = ページのレンダリング結果(いわゆるWebページ、HTML)
+              となるため、Pageオブジェクトには必ずひとつのテンプレートが指定されます。</dd>
             </dl>
+            <div class="notice">
+              テンプレートの書式としては Maya と ZPT（Zope Page Template）が使用できます。
+              また、独自の書式のテンプレートを扱うように拡張することもできます。
+              複数枚のテンプレートから表示をレンダリングするタイプのテンプレートエンジンに対応するために、
+              1つのPageオブジェクトにつき複数枚のテンプレートを持たせることができるようになっています。
+              テンプレートを持たないPageオブジェクトには、
+              ページタイプに応じたデフォルトテンプレートが適用されます。
+              デフォルトテンプレートとしては「/templates/ページタイプ名」
+              というパスアカウントを持つテンプレートが使用されます。
+            </div>
+            </p>
+
           </div>
         </div>
         <div class="right">
@@ -74,7 +122,8 @@
           <div class="desc">
             <ul>
               <li><a href="install.html">インストール</a></li>
-              <li><a href="gettingstarted2.html">始めてみよう</a></li>
+              <li><a href="gettingstarted.html">始めてみよう</a></li>
+              <li><a href="user.html">ユーザ・グループ・ロールの追加</a></li>
               <li>基礎知識
                 <ul>
                   <li><a href="variant.html">バリアント</a></li>
