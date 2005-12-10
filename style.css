@@ -58,6 +58,14 @@ h4
   border-bottom:solid 2px #999;
   margin-top:8px;
   margin-bottom:8px;
+  font-size:larger;
+}
+
+h5
+{
+  margin-top:8px;
+  margin-bottom:8px;
+  font-size:larger;
 }
 
 table
@@ -241,12 +249,25 @@ table td ul li
   margin:7px 0px 7px 0px;
 }
 
+#main div.desc p.code
+{
+  font-family:monospace;
+  margin:7px 0px 7px 0px;
+}
+
+#main div.desc a.largeImage
+{
+  border-style:none;
+}
+
 #main div.notice
 {
   background-color:#efc;
   border:groove 2px #ccc;
   font-size:x-small;
   padding:6px 10px 6px 10px;
+  margin-top:3px;
+  margin-bottom:3px;
 }
 
 #main ol
