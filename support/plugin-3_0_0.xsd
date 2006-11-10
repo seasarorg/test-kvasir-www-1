@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- default namespace rng = "http://relaxng.org/ns/structure/1.0" -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="plugin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="container"/>
+        <xs:element minOccurs="0" ref="runtime"/>
+        <xs:element minOccurs="0" ref="requires"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="extension"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="extension-point"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="name"/>
+      <xs:attribute name="version"/>
+      <xs:attribute name="provider-name"/>
+      <xs:attribute name="class"/>
+      <xs:attribute name="component"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="container">
+    <xs:complexType>
+      <xs:attribute name="config" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="runtime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="library"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="export"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="configurable"/>
+      <xs:attribute name="reset" type="xs:boolean"/>
+      <xs:attribute name="filter" type="xs:boolean"/>
+      <xs:attribute name="encoding"/>
+      <xs:attribute name="expand" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="export">
+    <xs:complexType>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="requires">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="import"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="import">
+    <xs:complexType>
+      <xs:attribute name="plugin" use="required"/>
+      <xs:attribute name="version"/>
+      <xs:attribute name="match"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:any processContents="skip"/>
+      </xs:sequence>
+      <xs:attribute name="point" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extension-point">
+    <xs:complexType>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="element-name" use="required"/>
+      <xs:attribute name="element-class" use="required"/>
+      <xs:attribute name="description"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="anything">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:attributeGroup name="anything">
+    <xs:anyAttribute processContents="skip"/>
+  </xs:attributeGroup>
+</xs:schema>
